@@ -2,6 +2,9 @@
 const mongoose = require('mongoose');
 const mongoUri = 'mongodb://localhost/reservations';
 
-const db = mongoose.connect(mongoUri);
+mongoose.connect(mongoUri, { useNewUrlParser: true});
 
-module.exports = db;
+module.exports = mongoose;
+
+
+

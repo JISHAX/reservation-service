@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
-const db = require('./connection.js');
+// const mongoose = require('mongoose');
+const mongoose = require('./connection.js');
 
 const reservationSchema = new mongoose.Schema({
-  id: Number,
+  resId: Number,
   size: Number,
   date: Date,
   time: Date
@@ -12,9 +12,7 @@ const reservationSchema = new mongoose.Schema({
   }
 );
 
-const Reservation = mongoose.model('Reservation', reservationSchema);
+const db = mongoose.model('Reservation', reservationSchema);
 
-module.exports = Reservation;
-
-
+module.exports = db;
 

@@ -8,7 +8,7 @@ for (var i = 0; i <= 100; i++) {
     resId: i,
     size: faker.random.number({min:2, max:10}),
     date: faker.date.between('2018-10-31', '2018-12-31'),
-    time: faker.date.soon
+    time: faker.date.recent()
   };
   fakeData.push(User);
 }

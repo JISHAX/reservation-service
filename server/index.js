@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const db = require('../database/Reservation.js');
 const path = require('path');
 
-const port = 3000;
+const port = 3003;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,7 +23,7 @@ app.get('/listings/:id/reservations', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log('server is up listening on 3000!');
+  console.log('server is up listening on 3003!');
 });
 
 

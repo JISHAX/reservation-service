@@ -19,6 +19,10 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ["", ".js", ".jsx", ".css"],
+    modulesDirectories: ["node_modules"]
+  },
   output: {
     filename: "bundle.js",
     path: path.join(__dirname + "/public")

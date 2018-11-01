@@ -12,7 +12,14 @@
     "seed": "node ./database/seed.js",
     "eslint": "eslint --ignore-path .gitignore .",
     "start": "nodemon ./server/index.js",
-    "test": "jest --coverage --"
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/webpack-babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ]
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -27,9 +34,15 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^1.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -37,9 +50,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "react-calendar": "^2.17.5",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
+    "webpack-babel-jest": "^1.0.4",
     "webpack-cli": "^3.1.2"
   }
 }

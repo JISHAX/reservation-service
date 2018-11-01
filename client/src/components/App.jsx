@@ -3,7 +3,7 @@ import { Input } from "semantic-ui-react";
 import PartySizeMenu from "./PartySizeMenu.jsx";
 import TimeMenu from "./TimeMenu.jsx";
 import DateMenu from "./DateMenu.jsx";
-import { formatDate } from "react-calendar";
+// import { formatDate } from "react-calendar";
 import moment from "moment";
 
 class App extends React.Component {

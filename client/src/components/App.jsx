@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 import React from "react";
 import { Input } from "semantic-ui-react";
 import PartySizeMenu from "./PartySizeMenu.jsx";

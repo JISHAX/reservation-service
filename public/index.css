@@ -97,10 +97,10 @@ h3 {
   -ms-flex: 1 50%;
   flex: 1 50%;
   margin-left: .5rem;
-    margin-top: .5rem;
+  margin-top: .5rem;
 
 }
-/*.dd-list {
+.dd-list {
   list-style: none;
   position: absolute;
   width: 150px;
@@ -109,15 +109,14 @@ h3 {
   max-height: 400px;
   margin: -30px;
   z-index: 5;
-}*/
+}
 
 
 .dd-list:hover {
   cursor: pointer;
 }
-.dd-list-time {
+.dd-list-time {       
   list-style: none;
-  overflow: scroll;
 }
 
 #masterContainer {

@@ -38,6 +38,7 @@ describe('PartySizeMenu component', () => {
 
 
 // });
+//
 it("on component mount we set the keydown listener", () => {
         document.addEventListener = jest.fn();
         wrapper = shallow(<PartySizeMenu />);

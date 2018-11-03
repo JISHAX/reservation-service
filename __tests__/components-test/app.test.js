@@ -16,32 +16,40 @@ describe("Testing App component", function() {
     // );
     expect(wrapper.find("#masterContainer").children()).toHaveLength(2);
   });
+
   it('should have a className of menu-border', () => {
     expect(wrapper.hasClass('menu-border'));
   });
+
   it('should have a state Calendar', () => {
     expect(wrapper.state('Calendar')).toBe(false);
   });
+
+  it('should have a title TimeMenu', () => {
+    expect(wrapper.contains('Make a reservation')).toBe(true);
+  });
+
+  it('should have a state TimeMenu', () => {
+    expect(wrapper.state('TimeMenu')).toEqual([]);
+  })
+
+  it('should call a method partySizeStateChanger', () => {
+    expect(wrapper.instance().partySizeStateChanger()).toBe(wrapper.state('For 3'));
+  });
+
+  it('should call a method timeMenuStateChanger', () => {
+    expect(wrapper.instance().timeMenuStateChanger()).toBe(wrapper.state('Today'));
+  });
+
+  it('should call a method timeClickHandler', () => {
+    expect(wrapper.instance().timeClickHandler()).toBe(wrapper.state('"7:00 PM"'));
+  });
+
 });
 
-describe('PartySizeMenu component', () => {
-//   beforeEach(() => {
-//     document = {
-//       ...document,
-//       addEventListener: () => { },
-//       removeEventListener: () => { }
-//     }
-//   })
-//   const wrapper = shallow(<PartySizeMenu />);
-//     it("should render PartySizeMenu component ", function() {
-//     expect(wrapper.hasClass('dd-list-item'));
 
 
-// });
-//
-it("on component mount we set the keydown listener", () => {
-        document.addEventListener = jest.fn();
-        wrapper = shallow(<PartySizeMenu />);
-        expect(document.addEventListener).toHaveBeenCalled();
-    });
-});
+
+
+
+

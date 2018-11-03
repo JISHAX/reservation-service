@@ -25,24 +25,38 @@ describe("Testing App component", function() {
 });
 
 describe('PartySizeMenu component', () => {
-  const wrapper = shallow(<PartySizeMenu />);
-    it("should render PartySizeMenu component ", function() {
-   console.log(
-      wrapper
-        .find(".dd-list-item")
-        .children()
-        .debug()
-    );
-   });
-    // expect(wrapper.find("#masterContainer").children()).toHaveLength(2);
-  // });
-  // it('should have a className of menu-border', () => {
-  //   expect(wrapper.hasClass('menu-border'));
-  // });
-  // it('should have a state Calendar', () => {
-  //   expect(wrapper.state('Calendar')).toBe(false);
-  // });
+//   beforeEach(() => {
+//     document = {
+//       ...document,
+//       addEventListener: () => { },
+//       removeEventListener: () => { }
+//     }
+//   })
+//   const wrapper = shallow(<PartySizeMenu />);
+//     it("should render PartySizeMenu component ", function() {
+//     expect(wrapper.hasClass('dd-list-item'));
+
+
+// });
+it("on component mount we set the keydown listener", () => {
+        document.addEventListener = jest.fn();
+        wrapper = shallow(<PartySizeMenu />);
+        expect(document.addEventListener).toHaveBeenCalled();
+    });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

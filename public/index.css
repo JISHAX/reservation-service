@@ -100,7 +100,7 @@ h3 {
     margin-top: .5rem;
 
 }
-.dd-list {
+/*.dd-list {
   list-style: none;
   position: absolute;
   width: 150px;
@@ -109,7 +109,7 @@ h3 {
   max-height: 400px;
   margin: -30px;
   z-index: 5;
-}
+}*/
 
 
 .dd-list:hover {

@@ -15,9 +15,6 @@
     "test": "jest --coverage --"
   },
   "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
     "scriptPreprocessor": "<rootDir>/node_modules/webpack-babel-jest",
     "testFileExtensions": [
       "es6",

@@ -1,6 +1,7 @@
 /*eslint-disable */
 
 import React from "react";
+import styles from "./index.css";
 
 class partySizeMenu extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class partySizeMenu extends React.Component {
         ref={myParty => {
           this.myParty = myParty;
         }}
-        className="dd-list-item"
+        className={styles["dd-list-item"]} 
         onClick={this.clickFunction.bind(
           this,
           this.props.menu,

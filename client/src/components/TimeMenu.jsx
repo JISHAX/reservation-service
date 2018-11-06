@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React from "react";
+import styles from "./index.css";
 
 class timeMenu extends React.Component {
   constructor(props) {
@@ -20,9 +21,9 @@ class timeMenu extends React.Component {
   render() {
     document.addEventListener("click", this.clickHandler, false);
     return (
-      <ul className="dd-list-time" ref={myTime => (this.myTime = myTime)}>
+      <ul className={styles['dd-list-time']} ref={myTime => (this.myTime = myTime)}>
         <li
-          className="dd-list-item"
+          className={styles['dd-list-item']}
           onClick={this.clickFunction.bind(
             this,
             this.props.menu,
@@ -34,7 +35,7 @@ class timeMenu extends React.Component {
           {this.props.menu} :00 {this.props.AM}
         </li>
         <li
-          className="dd-list-item"
+          className={styles['dd-list-item']}
           onClick={this.clickFunction.bind(
             this,
             this.props.menu,

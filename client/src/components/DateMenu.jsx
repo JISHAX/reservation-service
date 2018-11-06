@@ -1,6 +1,7 @@
 /* eslint-disable*/
 import React, { Component } from "react";
 import Calendar from "react-calendar";
+import styles from "./index.css";
 
 class DateMenu extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class DateMenu extends Component {
     if (this.props.Calendar) {
       document.addEventListener("click", this.handleClick, false);
       return (
-        <div ref={mycalendar => (this.mycalendar = mycalendar)} id="mycalendar">
+        <div ref={mycalendar => (this.mycalendar = mycalendar)} id={styles.mycalendar}>
           <Calendar
             onChange={this.onChange}
             value={this.state.date}

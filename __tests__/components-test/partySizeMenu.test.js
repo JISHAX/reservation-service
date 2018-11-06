@@ -19,5 +19,11 @@ let mock = jest.fn()
   it('should have a className of menu-border', () => {
     expect(wrapper.hasClass('dd-list-item'));
   });
+  // // it('should have a class dd-list-item', () => {
+  // //   const wrapper = shallow(<PartySizeMenu />);
+  // //   // console.log(wrapper.debug());
+  // //   expect(wrapper.find('.dd-list-item').hasClass('dd-list-item')).to.equal(true);
+  // })
+
 
 });

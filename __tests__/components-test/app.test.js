@@ -16,7 +16,6 @@ describe("Testing App component", function() {
     // );
     expect(wrapper.find("#masterContainer").children()).toHaveLength(2);
   });
-
   it('should have a className of menu-border', () => {
     expect(wrapper.hasClass('menu-border'));
   });

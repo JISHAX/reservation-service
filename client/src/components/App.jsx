@@ -7,6 +7,7 @@ import TimeMenu from "./TimeMenu.jsx";
 import DateMenu from "./DateMenu.jsx";
 // import { formatDate } from "react-calendar";
 import moment from "moment";
+import styles from './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -77,27 +78,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="masterContainer">
-        <div id="containerDiv" />
-        <div id="sideBar">
-          <div className="reservationContainer">
-            <div className="hh-header">
+      <div id={styles.masterContainer}>
+        <div id={styles.containerDiv} />
+        <div id={styles.sideBar}>
+          <div className={styles.reservationContainer}>
+            <div className={styles['hh-header']}>
               <h3> <span>Make a reservation</span></h3>
             </div>
-            <div className="main-container">
-              <div className="party-date">
-                <div className="party-size">Party Size</div>
-                <div className="dd-wrapper">
-              <div className="dd-header">
+            <div className={styles['main-container']}>
+              <div className={styles['party-date']}>
+                <div className={styles['party-size']}>Party Size</div>
+                <div className={styles['dd-wrapper']}>
+              <div className={styles['dd-header']}>
                 <div
-                  className="dd-header-title"
+                  className={styles['dd-header-title']}
                   onClick={this.partySizeClickHandler}
                 >
                   {this.state.PartySize}
                 </div>
               </div>
-              <div className="menu-border">
-                <ul className="dd-list">
+              <div className={styles['menu-border']}>
+                <ul className={styles['dd-list']}>
                   {this.state.PartySizeMenu.map((e, i) => (
                     <PartySizeMenu
                       key={i}
@@ -109,11 +110,11 @@ class App extends React.Component {
               </div>
             </div>
               </div>
-              <div className="whole">
-              <div className="half-left">
-                <div id="date-label">Date</div>
-                <div className="date">
-                  <div id="dateContainer" onClick={this.dateClickHandler}>
+              <div className={styles.whole}>
+              <div className={styles['half-left']}>
+                <div id={styles['date-label']}>Date</div>
+                <div className={styles.date}>
+                  <div id={styles.dateContainer} onClick={this.dateClickHandler}>
                     {this.state.Date}
                   </div>
                   <DateMenu
@@ -123,17 +124,17 @@ class App extends React.Component {
                   />
                 </div>
               </div>
-              <div className="half-right">
-                <div id="time-label">Time</div>
-                <div id="timeContainer">
+              <div className={styles['half-right']}>
+                <div id={styles['time-label']}>Time</div>
+                <div id={styles.timeContainer}>
                   <div
-                    className="dd-header-title"
+                    className={styles['dd-header-title']}
                     onClick={this.timeClickHandler}
                   >
                     {this.state.Time}
                   </div>
-                  <div className="dd-list-time">
-                    <ul className="dd-list">
+                  <div className={styles['dd-list-time']}>
+                    <ul className={styles['dd-list']}>
                       {this.state.TimeMenu.map((e, i) => (
                         <TimeMenu
                           key={i}
@@ -156,8 +157,8 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
-              <div id="findATable">
-                <button className="findATableButton">
+              <div id={styles.findATable}>
+                <button className={styles.findATableButton}>
                   <span>Find a Table </span>
                 </button>
               </div>

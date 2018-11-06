@@ -26,10 +26,10 @@ let mock = jest.fn()
     expect(wrapper.hasClass('dd-list-time'));
   });
 
-  it("should render TimeMenu component ", function() {
-  // jest.mock('../../client/src/components/PartySizeMenu');
-  // console.log(wrapper.debug())
-    expect(wrapper.props().className).toBe('dd-list-time');
-  });
+  // it("should render TimeMenu component ", function() {
+  // // jest.mock('../../client/src/components/PartySizeMenu');
+  // // console.log(wrapper.debug())
+  //   expect(wrapper.props().className).toBe('dd-list-time');
+  // });
 
 });

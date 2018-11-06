@@ -7,16 +7,16 @@ import PartySizeMenu from '../../client/src/components/PartySizeMenu'
 
 describe("Testing App component", function() {
     const wrapper = shallow(<App />);
-  it("should render App component ", function() {
-    // console.log(
-    //   wrapper
-    //     .find("#masterContainer")
-    //     .children()
-    //     .debug()
-    // );
-    expect(wrapper.find("#masterContainer").children()).toHaveLength(2);
-  });
-
+  // it("should render App component ", function() {
+  //   // console.log(
+  //   //   wrapper
+  //   //     .find("#masterContainer")
+  //   //     .children()
+  //   //     .debug()
+  //   // );
+  //   expect(wrapper.find("#masterContainer").children()).toHaveLength(2);
+  // });
+  console.log(wrapper.debug());
   it('should have a className of menu-border', () => {
     expect(wrapper.hasClass('menu-border'));
   });

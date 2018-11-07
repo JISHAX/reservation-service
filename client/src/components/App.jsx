@@ -7,7 +7,7 @@ import TimeMenu from "./TimeMenu.jsx";
 import DateMenu from "./DateMenu.jsx";
 // import { formatDate } from "react-calendar";
 import moment from "moment";
-import styles from './index.css';
+import styles from "./index.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -78,43 +78,48 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id={styles.masterContainer}>
-        <div id={styles.containerDiv} />
-        <div id={styles.sideBar}>
-          <div className={styles.reservationContainer}>
-            <div className={styles['hh-header']}>
-              <h3> <span>Make a reservation</span></h3>
-            </div>
-            <div className={styles['main-container']}>
-              <div className={styles['party-date']}>
-                <div className={styles['party-size']}>Party Size</div>
-                <div className={styles['dd-wrapper']}>
-              <div className={styles['dd-header']}>
-                <div
-                  className={styles['dd-header-title']}
-                  onClick={this.partySizeClickHandler}
-                >
-                  {this.state.PartySize}
+      <div className={styles.masterContainer}>
+        <div className={styles.containerDiv} />
+        <div className={styles.reservationContainer0}>
+          <div className={styles["hh-header"]}>
+            <h3>
+              {" "}
+              <span>Make a reservation</span>
+            </h3>
+          </div>
+          <div className={styles["main-container"]}>
+            <div className={styles["party-date"]}>
+              <div className={styles["party-size"]}>Party Size</div>
+              <div className={styles["dd-wrapper"]}>
+                <div className={styles["dd-header"]}>
+                  <div
+                    className={styles["dd-header-title"]}
+                    onClick={this.partySizeClickHandler}
+                  >
+                    {this.state.PartySize}
+                  </div>
+                </div>
+                <div className={styles["menu-border"]}>
+                  <ul className={styles["dd-list"]}>
+                    {this.state.PartySizeMenu.map((e, i) => (
+                      <PartySizeMenu
+                        key={i}
+                        menu={e}
+                        stateChange={this.partySizeStateChanger}
+                      />
+                    ))}
+                  </ul>
                 </div>
               </div>
-              <div className={styles['menu-border']}>
-                <ul className={styles['dd-list']}>
-                  {this.state.PartySizeMenu.map((e, i) => (
-                    <PartySizeMenu
-                      key={i}
-                      menu={e}
-                      stateChange={this.partySizeStateChanger}
-                    />
-                  ))}
-                </ul>
-              </div>
             </div>
-              </div>
-              <div className={styles.whole}>
-              <div className={styles['half-left']}>
-                <div id={styles['date-label']}>Date</div>
-                <div className={styles.date}>
-                  <div id={styles.dateContainer} onClick={this.dateClickHandler}>
+            <div className={styles.whole}>
+              <div className={styles["half-left"]}>
+                <div id={styles["date-label"]}>Date</div>
+                <div>
+                  <div
+                    id={styles.dateContainer}
+                    onClick={this.dateClickHandler}
+                  >
                     {this.state.Date}
                   </div>
                   <DateMenu
@@ -124,17 +129,17 @@ class App extends React.Component {
                   />
                 </div>
               </div>
-              <div className={styles['half-right']}>
-                <div id={styles['time-label']}>Time</div>
+              <div className={styles["half-right"]}>
+                <div id={styles["time-label"]}>Time</div>
                 <div id={styles.timeContainer}>
                   <div
-                    className={styles['dd-header-title']}
+                    className={styles["dd-header-title"]}
                     onClick={this.timeClickHandler}
                   >
                     {this.state.Time}
                   </div>
-                  <div className={styles['dd-list-time']}>
-                    <ul className={styles['dd-list']}>
+                  <div className={styles["dd-list-time"]}>
+                    <ul className={styles["dd-list"]}>
                       {this.state.TimeMenu.map((e, i) => (
                         <TimeMenu
                           key={i}
@@ -157,11 +162,10 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
-              <div id={styles.findATable}>
-                <button className={styles.findATableButton}>
-                  <span>Find a Table </span>
-                </button>
-              </div>
+            <div id={styles.findATable}>
+              <button className={styles.findATableButton}>
+                <span>Find a Table </span>
+              </button>
             </div>
           </div>
         </div>

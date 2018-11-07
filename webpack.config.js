@@ -18,6 +18,10 @@ module.exports = {
           "style-loader",
           {
             loader: "css-loader",
+            query: {
+              modules: true,
+              localIdentName: "[name]__[local]___[hash:base64:5]"
+            },
             options: {
               sourceMap: true,
               modules: true

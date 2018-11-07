@@ -40,11 +40,13 @@ class DateMenu extends Component {
     if (this.props.Calendar) {
       document.addEventListener("click", this.handleClick, false);
       return (
-        <div ref={mycalendar => (this.mycalendar = mycalendar)} id={styles.mycalendar}>
+        <div
+          ref={mycalendar => (this.mycalendar = mycalendar)}
+          id={styles.mycalendar}
+        >
           <Calendar
             onChange={this.onChange}
             value={this.state.date}
-            calendarType="US"
             onClickDay={this.handleClick2}
           />
         </div>

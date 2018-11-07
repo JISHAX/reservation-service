@@ -1,34 +1,39 @@
-body {
-  font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
-  height: 5000px;
-}
 .reservationContainer {
   display: block;
-  -webkit-box-shadow: 0 2px 8px rgba(153,153,153,.4);
-  box-shadow: 0 2px 8px rgba(153,153,153,.4);
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+  box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+}
+.reservationContainer2 {
+  display: none;
+  padding: 0;
+  margin: 0;
+  position: block;
+  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
+  box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
 }
 .dd-list-item {
 }
 .hh-header {
   height: 48px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #fff;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    text-align: center;
-    padding: 0 1rem;
-    position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
 }
 h3 {
   font-size: 21px;
@@ -48,9 +53,9 @@ h3 {
 }
 
 .party-size {
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
 }
 
 .dd-header {
@@ -69,7 +74,7 @@ h3 {
   cursor: pointer;
   font-family: inherit;
   background-color: #fff;
-  font-size: .875rem;
+  font-size: 0.875rem;
   display: block;
   outline: none;
   border: none;
@@ -98,9 +103,8 @@ h3 {
   -webkit-box-flex: 1;
   -ms-flex: 1 50%;
   flex: 1 50%;
-  margin-left: .5rem;
-  margin-top: .5rem;
-
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 .dd-list {
   list-style: none;
@@ -113,27 +117,26 @@ h3 {
   z-index: 5;
 }
 
-
 .dd-list:hover {
   cursor: pointer;
 }
-.dd-list-time {       
+.dd-list-time {
   list-style: none;
 }
 
 #masterContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 992px;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: inherit;
+  max-width: inherit;
+  -webkit-box-direction: reverse;
 }
 .whole {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 100%;
   flex: 1 100%;
@@ -142,7 +145,7 @@ h3 {
   -webkit-box-flex: 1;
   -ms-flex: 1 50%;
   flex: 1 50%;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 .half-right {
   -webkit-box-flex: 1;
@@ -160,27 +163,19 @@ h3 {
   width: 100%;
 }
 .findATableButton {
-  padding: .75rem 1rem;
-    text-decoration: none;
-    background-color: #da3743;
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    line-height: 1.5;
-    width: 18rem;
-    font-weight: 500;
-    border-radius: 2px;
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#sideBar {
-  width: 320px;
-  margin: 0, 0, 0, 1rem;
-  display: block;
-  direction: reverse;
-  -webkit-box-direction: reverse;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  background-color: #da3743;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 18rem;
+  font-weight: 500;
+  border-radius: 2px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #time-label,
 #date-label {
@@ -193,7 +188,7 @@ h3 {
   cursor: pointer;
   font-family: inherit;
   background-color: #fff;
-  font-size: .875rem;
+  font-size: 0.875rem;
   display: block;
   outline: none;
   border: none;
@@ -212,7 +207,10 @@ h3 {
   z-index: 5;
 }
 #containerDiv {
-  width: 700px;
-  height: 900px;
-  margin: 0px;
+  max-width: inherit;
+  width: inherit;
+  padding: 0;
+  margin: 0;
+  display: block;
+  -webkit-box-direction: reverse;
 }

@@ -13,17 +13,22 @@ class timeMenu extends React.Component {
     document.removeEventListener("click", this.clickHandler, false);
   }
   clickHandler(e, tail) {
-    if (!this.myTime.contains(e.target)) {
+    if (this.myTime && !this.myTime.contains(e.target)) {
       document.removeEventListener("click", this.clickHandler, false);
       this.props.stateChange(this.props.currTime);
+    } else {
+      document.removeEventListener("click", this.clickHandler, false);
     }
   }
   render() {
     document.addEventListener("click", this.clickHandler, false);
     return (
-      <ul className={styles['dd-list-time']} ref={myTime => (this.myTime = myTime)}>
+      <ul
+        className={styles["dd-list-time"]}
+        ref={myTime => (this.myTime = myTime)}
+      >
         <li
-          className={styles['dd-list-item']}
+          className={styles["dd-list-item"]}
           onClick={this.clickFunction.bind(
             this,
             this.props.menu,
@@ -35,7 +40,7 @@ class timeMenu extends React.Component {
           {this.props.menu} :00 {this.props.AM}
         </li>
         <li
-          className={styles['dd-list-item']}
+          className={styles["dd-list-item"]}
           onClick={this.clickFunction.bind(
             this,
             this.props.menu,

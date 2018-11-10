@@ -18,8 +18,10 @@ class App extends React.Component {
     this.timeMenuStateChanger = this.timeMenuStateChanger.bind(this);
     this.dateClickHandler = this.dateClickHandler.bind(this);
     this.dateChanger = this.dateChanger.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       PartySize: "For 3",
+      reservationContainer: "reservationContainer0",
       PartySizeMenu: [],
       Date: "Today",
       Calendar: false,
@@ -28,6 +30,28 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount(e) {
+    document.addEventListener("scroll", this.handleScroll, false);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.handleClick, false);
+  }
+
+  handleScroll(e) {
+    let thisnode = document.getElementsByClassName(
+      styles[this.state.reservationContainer]
+    );
+    let offsettop = thisnode[0].offsetTop;
+    if (offsettop <= window.scrollY) {
+      let obj = Object.assign({}, this.state);
+      obj.reservationContainer = "reservationContainer";
+      this.setState(obj);
+    } else {
+      let obj = Object.assign({}, this.state);
+      obj.reservationContainer = "reservationContainer0";
+      this.setState(obj);
+    }
+  }
   partySizeClickHandler() {
     let arr = [];
     for (var i = 0; i < 20; i++) {
@@ -80,7 +104,7 @@ class App extends React.Component {
     return (
       <div className={styles.masterContainer}>
         <div className={styles.containerDiv} />
-        <div className={styles.reservationContainer0}>
+        <div className={styles[this.state.reservationContainer]}>
           <div className={styles["hh-header"]}>
             <h3>
               {" "}

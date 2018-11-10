@@ -1,9 +1,9 @@
 {
-  "name": "",
+  "name": "reservation",
   "version": "",
   "description": "",
   "author": "",
-  "license": "",
+  "license": "MIT",
   "engines": {
     "node": ">=6.13.0"
   },
@@ -11,7 +11,7 @@
     "react-dev": "webpack -d --watch",
     "seed": "node ./database/seed.js",
     "eslint": "eslint --ignore-path .gitignore .",
-    "start": "nodemon ./server/index.js",
+    "start": "nodemon server/index.js",
     "test": "jest --coverage --"
   },
   "jest": {

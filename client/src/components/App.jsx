@@ -104,7 +104,7 @@ class App extends React.Component {
     return (
       <div className={styles.masterContainer}>
         <div className={styles.containerDiv} />
-        <div className={styles[this.state.reservationContainer]}>
+        <div className={styles.reservationContainer}>
           <div className={styles["hh-header"]}>
             <h3>
               {" "}

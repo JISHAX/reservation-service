@@ -14,8 +14,8 @@ body {
 }
 .reservationContainer0 {
   display: block;
-  margin-top: 100px;
   max-width: 320px;
+  padding: 0;
   -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
   box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
 }

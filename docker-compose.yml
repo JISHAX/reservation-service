@@ -1,12 +1,10 @@
-version: '2'
+version: "2"
 
 services:
   reservation:
-    build: .
-    depends_on:
-      - 'database'
-    ports: 
-      - '3003:3003'
+    image: hanlinaunghack/reservation:latest
+    ports:
+      - "80:3003"
 
   database:
     image: mongo:latest
